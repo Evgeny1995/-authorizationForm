@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div id="app">
+      <section class="wrap">
+        <div class="authorization">
+          <div class="authorization_content">
+            <img class="authorization_content_logo" src="./image/png/flower.png" alt="Логотип">
+            <h2 class="authorization_content_title">Авторизация</h2>
+            <div class="preloader">
+              <div class="spinner"></div>
+            </div>
+            <div class="authorization_content_form_container form_container">
+              <div class="authorization__successful"></div>
+              <form class="form" action="">
+                <div class="form_login_container">
+                  <input class="form_login input" type="text" placeholder="Email или телефон">
+                </div>
+                <div class="form_password_container">
+                  <input class="form_password input" type="password" placeholder="Пароль">
+                </div>
+                <p class="form_res_out"></p>
+                <button class="form_submit" type="submit">Войти</button>
+              </form>
+            </div>
+          </div>
+          <div class="decor_triangle top_left"></div>
+          <div class="decor_triangle top_right"></div>
+          <div class="decor_triangle bottom_left"></div>
+          <div class="decor_triangle bottom_right"></div>
+        </div>
+      </section>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

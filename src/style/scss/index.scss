@@ -1,0 +1,194 @@
+@import 'variables';
+@import 'fonts';
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.wrap {
+  width: 100%;
+  margin: 0 auto;
+
+}
+
+.authorization {
+  max-width: 1920px;
+  margin: 17px  ;
+  height: 1080px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  border: 1px solid $color-yellow1;
+  padding: 0 10px;
+  background-color: $color-white;
+}
+
+@media(min-width: 1954px) {
+  .authorization {
+    margin: 17px auto;
+  }
+}
+
+.decor_triangle {
+  position: absolute;
+  background: url("../../../image/png/decorOne.png") no-repeat;
+  width: 120px;
+  height: 120px;
+  z-index: 1;
+  background-color: $color-white;
+}
+
+.top_left {
+  top: -4px;
+  left: -6px;
+  background-position: top left;
+}
+
+.top_right {
+  top: -4px;
+  right: -6px;
+  transform: rotate(90deg);
+  background-position: top left;
+}
+
+.bottom_left {
+  bottom: -4px;
+  left: -6px;
+  transform: rotate(-90deg);
+  background-position: top  left;
+}
+
+.bottom_right {
+  bottom: -4px;
+  right: -6px;
+  transform: rotate(180deg);
+  background-position: top  left;
+}
+.authorization_content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: center;
+  max-width: 457px;
+}
+
+.authorization_content_logo {
+}
+
+.authorization_content_title {
+  font-family: 'Roboto', 'serif';
+  font-weight: 700;
+}
+
+.authorization_content_form_container {
+ flex-grow: 1;
+  width: 100%
+}
+
+.form {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.input {
+  width: 100%;
+  height: 48px;
+  font-family: 'Roboto','serif';
+  font-weight: 400;
+  padding-left: 48px;
+  border: 1px solid $color-grey;
+  color: $color-black;
+  border-radius: 5px;
+  outline: none;
+
+  &::placeholder {
+    color: $color-grey;
+  }
+}
+
+.form_login_container {
+  position: relative;
+   width: 100%;
+
+  &:before {
+    position: absolute;
+    content: '';
+    background: url("../../../image/svg/user-icon.svg") center center no-repeat;
+    width: 26px;
+    height: 26px;
+    top: 11px;
+    left: 11px;
+  }
+}
+
+.form_login {
+}
+
+.form_password {
+  margin-top: 16px;
+}
+
+.form_password_container {
+  position: relative;
+  width: 100%;
+
+  &:before {
+    position: absolute;
+    content: '';
+    background: url("../../../image/svg/key-icon.svg") center center no-repeat;
+    width: 26px;
+    height: 26px;
+    top: 27px;
+    left: 11px;
+  }
+}
+
+.form_submit {
+  width: 175px;
+  height: 48px;
+  background-color: $color-yellow2;
+  border: none;
+  color: $color-white;
+  border-radius: 5px;
+}
+
+.preloader {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255,255,255, 0.3);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #cccccc;
+  border-top-color: #1a1a1a;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
